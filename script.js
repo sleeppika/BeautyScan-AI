@@ -3,7 +3,7 @@
 // Powered by TensorFlow.js & Teachable Machine
 // ==========================================================================
 
-const DEFAULT_MODEL_URL = "https://teachablemachine.withgoogle.com/models/Ebf5DZ8NE/";
+const DEFAULT_MODEL_URL = "https://teachablemachine.withgoogle.com/models/FvQjy72kc/";
 
 function getModelURL() {
     let url = localStorage.getItem("beautyscan_model_url") || DEFAULT_MODEL_URL;
@@ -589,7 +589,7 @@ function showDetectedState(className, confidence) {
 
     // Percentage string
     const percentNum = (confidence * 100);
-    const percentStr = percentNum.toFixed(2) + "%";
+    const percentStr = Math.round(percentNum) + "%";
 
     // Circle Frame
     if (circleFrame) circleFrame.classList.remove("scanning-pulse");
